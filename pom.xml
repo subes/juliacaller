@@ -6,7 +6,7 @@
 
     <groupId>org.expr</groupId>
     <artifactId>juliacaller</artifactId>
-    <version>0.2.1-SNAPSHOT</version>
+    <version>0.2.1-inv</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,7 +18,7 @@
         <dependency>
             <groupId>org.json</groupId>
             <artifactId>json</artifactId>
-            <version>20190722</version>
+            <version>20211205</version>
         </dependency>
         <!-- junit 5, unit test -->
         <dependency>
@@ -59,8 +59,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.6.1</version>
                 <configuration>
-                    <source>15</source>
-                    <target>15</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
             <plugin>
@@ -81,5 +81,31 @@
             </plugin>
         </plugins>
     </build>
+
+  <distributionManagement>
+		<repository>
+			<id>invesdwin-oss</id>
+			<name>invesdwin-oss</name>
+			<url>https://invesdwin.de/repo/invesdwin-oss</url>
+		</repository>
+		<snapshotRepository>
+			<id>invesdwin-oss</id>
+			<name>invesdwin-oss</name>
+			<url>https://invesdwin.de/repo/invesdwin-oss</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>invesdwin-oss</id>
+			<url>https://invesdwin.de/repo/invesdwin-oss-remote</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>invesdwin-oss</id>
+			<url>https://invesdwin.de/repo/invesdwin-oss-remote</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 </project>
